@@ -1,20 +1,28 @@
 import React from 'react'
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+
+//npm install react-icons --save
+
 
 const ProfileBody = () => {
   return (
-    <div className='container'>
-        <div className='inside'>
-          <p className='name'>NAME</p>
-          <p className='location'>LOCATION</p>
-          <p className="title">TITLE</p>
-          <p className='comments'><a href="#"><i class="fa fa-dribbble"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          </p>
+    <div className='grid place-content-center font-semibold'>
+        <div className='flex flex-col space-y-4 '>
 
-          <button className='button'>Show more</button>
-        </div>
+          <p className='text-[25px]'>NAME</p>
+          <p className='text-[14px]'>LOCATION</p>
+          <p className="text-[14px]">TITLE</p>
+          </div>
+          <div className="flex space-x-4 p-4 text-blue-500 hover:text-blue-700 msg-icon text-2xl mr-2">
+          <a href="#" className=' '><FaTwitter /></a>
+          <a href="#"><FaLinkedin /></a>
+          <a href="#"><FaFacebook /></a>
+          </div>
+    
+          <button className="bg-red-600 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Show more</button>
+        
         
       </div>
   )
